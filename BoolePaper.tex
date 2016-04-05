@@ -7,6 +7,8 @@
 \setlist[enumerate]{leftmargin=*,widest=0}
 \usepackage{graphicx}
 \graphicspath{ {boolesResources/} }
+\usepackage{multicol}
+\setlength{\columnsep}{1cm}
 
 \title{George Boole}
 \author{Nick Zayatz and Michele Burns}
@@ -22,13 +24,54 @@ Over the course of his life, George Boole made some major contributions to mathe
 \caption{Boole's Identity for residues of rational functions.}\label{fig1}
 \end{figure}
 
-Boole also did some minor work in the study of probability. In the second part of his "An Investigation of The Laws of Thought" (1854), Boole used his new discoveries in symbolic logic in an attempt to determine whether or not events would happen based on what passed events had previously occurred. This section of his work contains the proof of the \textbf{union bound}, otherwise know as Boole's Inequality.
+Boole also did some minor work in the study of probability. In the second part of his \textit{An Investigation of The Laws of Thought} (1854), Boole used his new discoveries in symbolic logic in an attempt to determine whether or not events would happen based on what passed events had previously occurred. This section of his work contains the outlines of what we know now as the \textbf{union bound} or Boole's Inequality. Boole's Inequality states that the probability of any specific event occurring in a set of events is less that the sum of the probabilities of all of the events in that set. This can be expressed in mathematical terms by the inequality
 
-Despite his contributions to other mathematical fields, Boole most important addition to the field of mathematics was his work involving symbolic logic, which many now refer to as "Boolean Algebra." Boole first introduced this topic of study in his treatise "The Mathematical Analysis of Logic" in 1847. The idea was then further expanded and refined in 1854, when Boole published his most famous work "An Investigation of The Laws of Thought."
+\begin{eqnarray*}
+\mathbb{P}\bigg(\bigcup\limits_{i} A_{i}\bigg)\leq\sum\mathbb{P}(A_{i})
+\end{eqnarray*}\\
+where $A_{i}$ is representative on an event in the set. This inequality was later perfected and generalized by Carlo Emilio Bonferroni in the 1930's.
+
+Despite his contributions to other mathematical fields, Boole's most important addition to the development of mathematics was his work involving symbolic logic, which many now refer to as "Boolean Algebra." Boole first introduced this topic of study in his treatise \textit{The Mathematical Analysis of Logic} in 1847. The idea was then further expanded and refined in 1854, when Boole published his most famous work \textit{An Investigation of The Laws of Thought.} Boolean Algebra is a base-2 branch of algebra where each variable represents either a $true$ or $false$ value (typically $1 = true \text{ and } 0 = false$). Operations can then be performed on these values to, in essence, solve whether or not some expression will be true. Some examples of these operations are defined in Figure \ref{fig2}. 
+
+\begin{figure}[H]
+\centerline{Negation: if $x$ is $true$, then the expression (Not $x$) is $false$}
+\centerline{And: if the values $x$ and $y$ are both $true$, then the expression ($x$ and $y$) is $true$}
+\centerline{Or: if either $x$ or $y$ is $true$, then the expression ($x$ or $y$) is $true$}
+\caption{Definitions for some Boolean Algebra operations.}\label{fig2}
+\end{figure}
+
+In \textit{An Investigation of The Laws of Thought}, Boole first laid out the notation and axioms of his symbolic logic. Each operation has numerous forms, the most common of which can be seen in Figure \ref{fig3}.
+
+\begin{figure}[H]
+\centerline{Variables: $x,y,z$}
+\centerline{Negation: $(1-x), -x, \bar{x}, !x$}
+\centerline{Or: $x\cup y, x$ or $y, x + y, x | y$}
+\centerline{And: $x \cap y, x$ and $y, xy, x*y, x \& y$}
+\centerline{True: $1$, true, $T$}
+\centerline{False: $0$, false, $F$}
+\caption{Various forms of notation for Boolean Algebra operations.}\label{fig3}
+\end{figure}
+\noindent
+The axioms of Boolean Algebra can be seen in Figure \ref{fig4}.
+
+\begin{figure}[H]
+\begin{equation*}
+\begin{aligned}[c]
+&1.\text{ Identity:}		&	&2.\text{ Null Value:}		&	&3.\text{Complement:}\\
+&x*1 = x				&	&x*0 = 0				&	&x*\bar{x} = 0\\
+&x + 0 = x				&	&x + 1 = 1				&	&x + \bar{x} = 1\\
+&4.\text{ Idempotent:}	&	&5.\text{ Commutative:}	&	&6.\text{ Associative:}\\
+&x*x = x				&	&x*y = y*x				&	&x*(y*z) = (x*y)*z\\
+&x + x = x				&	&x + y = y + x			&	&x+(y+z) = (x+y)+z\\
+&7.\text{ Distributive:}	&	&8.\text{ Inverse:}		&	&9.\text{ Absorption:}\\
+&x*(y+z) = x*y + y*z		&	&\bar{\bar{x}} = x		&	&x+(x*y) = x\\
+&(x+y)(x+z) = x + (y*z)	&	&					&	&x*(x+y) = x
+\end{aligned}
+\end{equation*}
+\caption{Boole's original axioms for Boolean Algebra.}\label{fig4}
+\end{figure}
 
 \newpage
-
-
 
 \begin{thebibliography}{9}
 \bibitem{AnalysisBook} 
