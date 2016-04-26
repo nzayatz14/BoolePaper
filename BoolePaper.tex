@@ -1,8 +1,9 @@
 \documentclass[12]{article} %the sets the document type.
-
+\usepackage{mdframed}
 \usepackage{amsmath,amssymb,amsthm} %this loads commonly used math packages
 \usepackage{enumitem}
 \usepackage{float}
+\usepackage{csquotes}
 \newtheorem{theorem}{Theorem} %this declares the theorem environment
 \setlist[enumerate]{leftmargin=*,widest=0}
 \usepackage{graphicx}
@@ -10,37 +11,71 @@
 \usepackage{multicol}
 \setlength{\columnsep}{1cm}
 
-\title{George Boole}
-\author{Nick Zayatz and Michele Burns}
 
 \renewcommand{\baselinestretch}{1.5} 
 \begin{document} %document starts here
-\maketitle % makes the title
 
-Over the course of his life, George Boole made some major contributions to mathematics. In the field of analysis, Boole published his treatise \textit{On the Comparison of Transcendents, with Certain Applications to the Theory of Definite Integrals} in 1857. In this work, Boole mainly studies the sum of residues of rational functions. A residue is most simply described as a complex number that is proportional to the line integral of a complex function that is complexly differentiable on its entire domain except for a few select points. These residues are calculated by functions in the form $f: \mathbb{C}\setminus \{a_{k}\}_{k} \rightarrow \mathbb{C}$, where $f$ is complexly differentiable on all points except $\{a_{k}\}_{k}$. Boole's work in this field eventually lead him to the equality which we now call \textbf{Boole's Identity}. This identity states that $\forall a_{k},b_{k}, \text{ and } t \in \mathbb{R}$ where $a_{k} > 0 \text{ and } t > 0$, then the following identity is true:
+ \begin{titlepage}
+   \vspace*{\fill}
+   \begin{center}
+   \large \textbf {George Boole}\\[0.5cm]
+    {Nick Zayatz and Michele Burns}\\[0.5cm]
+    April 26, 2016
+    \end{center}
+    \vspace*{\fill}
+    \end{titlepage}
 
-\begin{figure}[H]
-\centerline{\includegraphics[scale=0.8]{boolesIdentity}.}
-\caption{Boole's Identity for residues of rational functions.}\label{fig1}
-\end{figure}
 
-Boole also did some minor work in the study of probability. In the second part of his \textit{An Investigation of The Laws of Thought} (1854), Boole used his new discoveries in symbolic logic in an attempt to determine whether or not events would happen based on what passed events had previously occurred. This section of his work contains the outlines of what we know now as the \textbf{union bound} or \textbf{Boole's Inequality}. Boole's Inequality states that the probability of any specific event occurring in a set of events is less that the sum of the probabilities of all of the events in that set. This can be expressed in mathematical terms by the inequality
+
+%%%%%%%%%%%%%%%%%%%%%%%%%Introduction%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+Throughout history, there have been mathematicians who were largely ignored, or whose achievements were often are forgotten. However, George Boole is certainly not one of them. The practical application of his ideas ultimately led to a tool that is utilized daily all over the world, the computer. This is due to the fact that Boole was able to symbolize and formalize the principles governing logical thought, something that was unachievable by those who came before him. 
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%Bio%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+George Boole was born in Lincoln, England on 2 November 1815. Though Boole's family had a steady income from his father's business as a shoemaker, the family was by no means well off. Making shoes was his father's job, but his passion was science and mathematics, meaning the business was not as successful as it could have been. Boole began his schooling at the age of two and by the age of seven, he was receiving instruction in mathematics from his father. He attended the best school that his family could afford, and yet his eagerness for learning quickly outpaced his teachers. By age fourteen, he has mastered Latin and was teaching himself  Greek, as well as French and German.
+
+Though Boole never formally studied for an academic degree, at the age of sixteen he became an assistant teacher at the Heigham's School in Doncaster, in an effort to support his family. In 1835, Boole gives his first public lecture on the discoveries of Sir Isaac Newton at the Mechanic's Institute, which would later be printed and sold. In 1840, Boole opened his own boarding school, though the opening of a school did not slow down his study of mathematics. Throughout his study of Laplace and Lagrange, he began publishing regularly at the advice of Gregory Duncan, founder of the \textit{Cambridge Mathematical Journal}, and it is Duncan who encourages Boole's study of algebra. It is not until 1842, when Boole begins corresponding with Augustus De Morgan that his work in the field of mathematics begins to flourish. 
+
+Boole was recognized for his achievements with the Society's Royal Medal in 1844, as a result of his paper, \textit {On a General Method of Analysis}, which was published in \textit{Transactions of the Royal Society}.  The Society's Royal Medals are awarded for the most important contributions to the advancement of Natural Knowledge in the physical and biological sciences. As a recipient of this award he was now beginning to be recognized by the mathematical community. In fact, leading mathematicians such as De Morgan, Kelland, and Thomson wrote recommendation letters in support of Boole as he applied for a professorship at one of the Queen's Colleges. He was ultimately appointed the first professor of Mathematics at Queen's College in Cork, where he would then be appointed the Dean of the Science Division. Through his professorship, he met his wife Mary Everest (niece of Sir George Everest, after whom the mountain is named).
+
+In 1854, Boole publishes \textit{An Investigation of the Laws of Thought}, which builds and expands upon his first book, \textit{A Mathematical Analysis of Logic}. This book is revolutionary, and Boole knew it, writing to Thomson in a letter, 
+\begin{displayquote}
+I am now about to set seriously to work upon preparing for the press an account of my theory of Logic and Probabilities which in its present state I look upon as the most valuable if not the only valuable contribution that I have made or am likely to make to Science and the thing by which I would desire if at all to be remembered hereafter.
+\end{displayquote}
+\noindent This book described a new way of incorporating logic into mathematics, by reducing the logic to simple algebra, known today as Boolean Algebra. This concept extends to switching circuits and computer construction, which transformed science in the years following.
+
+Unfortunately, this talented mathematician died very early at the age of 49 on 8 December 1864. He walked from his home to the college in the pouring rain, and taught all day in damp clothing, which led to pneumonia. Though it is rumored that Boole's wife believed that a remedy should resemble the cause. She put Boole to bed and threw buckets of water over the bed since his illness had been caused by getting wet. 
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+Boole's love of math was instilled by his father at a young age, and over the course of his life he made major contributions to the field of mathematics; one of which was a new view on probability theory. In fact Boole devoted six chapters in the second part of his \textit{An Investigation of The Laws of Thought} (1854) to this subject. Boole used his new discoveries in symbolic logic in an attempt to determine whether or not events would happen based on what passed events had previously occurred. This section of his work contains the outlines of what we know now as the \textbf{union bound} or \textbf{Boole's Inequality}. Boole's Inequality states that the probability of any specific event occurring in a set of events is less than the sum of the probabilities of all of the events in that set. This can be expressed in mathematical terms by the inequality
 
 \begin{eqnarray*}
 \mathbb{P}\bigg(\bigcup\limits_{i} A_{i}\bigg)\leq\sum\mathbb{P}(A_{i})
 \end{eqnarray*}\\
 where $A_{i}$ is representative on an event in the set. This inequality was later perfected and generalized by Carlo Emilio Bonferroni in the 1930's.
 
+However, his areas of mathematical study go far beyond his work in probability. In the field of analysis, Boole published his treatise \textit{On the Comparison of Transcendents, with Certain Applications to the Theory of Definite Integrals} in 1857. In this work, Boole mainly studies the sum of residues of rational functions. A residue is a concept of complex analysis. In essence, it is a complex number that is proportional to the line integral of a complex function that is complexly differentiable except for a few select points on its entire domain. These residues are calculated by functions in the form $f: \mathbb{C}\setminus \{a_{k}\}_{k} \rightarrow \mathbb{C}$, where $f$ is complexly differentiable on all points except $\{a_{k}\}_{k}$. Boole's work in this field eventually lead him to the equality which we now call \textbf{Boole's Identity}. This identity states that $\forall a_{k},b_{k}, \text{ and } t \in \mathbb{R}$ where $a_{k} > 0 \text{ and } t > 0$, then the following identity is true:
+\begin{figure}[H]
+\begin{eqnarray*}
+res\left\{x\in\mathbb{R}|\Re\frac{1}{\pi}\sum\frac{a_{k}}{x - b_{k}}\geq t\right\} = \frac{\sum a_{k}}{\pi t}
+\end{eqnarray*}
+\caption{Boole's Identity for residues of rational functions.}
+\end{figure}
+
 Despite his contributions to other mathematical fields, Boole's most important addition to the development of mathematics was his work involving symbolic logic, which many now refer to as "Boolean Algebra." Boole first introduced this topic of study in his treatise \textit{The Mathematical Analysis of Logic} in 1847. The idea was then further expanded and refined in 1854, when Boole published his most famous work \textit{An Investigation of The Laws of Thought.} Boolean Algebra is a base-2 branch of algebra where each variable represents either a $true$ or $false$ value (typically $1 = true \text{ and } 0 = false$). Operations can then be performed on these values to, in essence, solve whether or not some expression will be true. Some examples of these operations are defined in Figure \ref{fig2}. 
 
+
 \begin{figure}[H]
+\begin{mdframed}
 \centerline{Negation: if $x$ is $true$, then the expression (Not $x$) is $false$}
-\centerline{And: if the values $x$ and $y$ are both $true$, then the expression ($x$ and $y$) is $true$}
+\centerline{And: if the values $x$ and $y$ are both $true$, then the expression ($x$ and $y$) is $true$}  
 \centerline{Or: if either $x$ or $y$ is $true$, then the expression ($x$ or $y$) is $true$}
+\end{mdframed}
 \caption{Definitions for some Boolean Algebra operations.}\label{fig2}
 \end{figure}
 
-In \textit{An Investigation of The Laws of Thought}, Boole first laid out the notation and axioms of his symbolic logic. Each operation has numerous forms, the most common of which can be seen in Figure \ref{fig3}.
+
+In \textit{An Investigation of The Laws of Thought}, Boole first laid out the notation and axioms(seen in Figure \ref{fig4}) of his symbolic logic. Each operation has numerous forms, the most common of which can be seen in Figure \ref{fig3}.
 
 \begin{figure}[H]
 \centerline{Variables: $x,y,z$}
@@ -52,7 +87,8 @@ In \textit{An Investigation of The Laws of Thought}, Boole first laid out the no
 \caption{Various forms of notation for Boolean Algebra operations.}\label{fig3}
 \end{figure}
 \noindent
-The axioms of Boolean Algebra can be seen in Figure \ref{fig4}.
+
+After laying out his guidelines for symbolic logic, Boole began to explain his mathematical concepts in terms of sets. For example, say the set $x$ denoted all metal things and the set $y$ denoted all sharp things. This would imply that the set $\bar{x}$ is the set of all non-metals, and the set $(xy)$ is the set of all sharp metals. He then explained to the reader that the variables were not simply sets of entities, rather they were questions representing properties of an entity. The variable $x$ does not represent the set of all metal things, it actually portrays the question "is the given substance a metal?" If the substance is a metal, $x$ is $1$, otherwise, $x$ is $0$. 
 
 \begin{figure}[H]
 \begin{equation*}
@@ -71,7 +107,9 @@ The axioms of Boolean Algebra can be seen in Figure \ref{fig4}.
 \caption{Boole's original axioms for his symbolic logic.}\label{fig4}
 \end{figure}
 
-After laying out his guidelines for symbolic logic, Boole began to explain his mathematical concepts in terms of sets. For example, say the set $x$ denoted all metal things and the set $y$ denoted all sharp things. This would imply that the set $\bar{x}$ is the set of all non-metals, and the set $(xy)$ is the set of all sharp metals. He then explained to the reader that the variables were not simply sets of entities, rather they were questions representing properties of an entity. The variable $x$ does not represent the set of all metal things, it actually portrays the question "is the given substance a metal?" If the substance is a metal, $x$ is $1$, otherwise, $x$ is $0$. 
+Overall, George Boole had an astounding impact in not just the field of mathematics, but also in computer science, engineering, education, as well as literature.  In the field of mathematics, he not only freed algebra from arithmetic which allowed mathematics to be thought of more abstractly, but he also discovered a new way to look at probability. His work with mathematical logic paved the way for the fields of computer science and engineering. Alan Turing along with Claude Shannon agreed to use Boolean logic as a fundamental piece of their electronic programmable computers. Today everyone carries a mini computer in their pocket, which would not have been possible without the logic developed by Boole. In terms of education, Boole was very unorthodox for his time period. In terms of teaching, he was very practical and used the blackboard as well as objects to explain arithmetic. He valued not simply just science and math, but also languages and literature as well. As teacher, he strong preached that you needed to speak the language and read its literature. This is not a surprise since this was much like his upbringing, nor is it a surprise that the child prodigy made exceptional impacts in literature either. At the age of 14, Boole was translating ancient Greek poems so well, that it was called into question whether Boole truly translated it. George Boole was certainly a jack of all trades, but he was also an expert in almost all of them. 
+
+
 
 \newpage
 
